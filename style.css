@@ -1,0 +1,144 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif; 
+    overflow: hidden;
+}
+body > .nav {
+    width: 100%;
+    height: 10vh;
+}
+body > .nav > .left {
+  flex: 0.5;
+  font-size: 1.438rem;
+}
+body > .nav > .mid {
+  flex: 5;
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+body > .nav > .right {
+  flex: 1;
+}
+body > .content {
+    width: 100%;
+    height: 90vh;
+    flex-direction: row;
+    grid-gap: 10px;
+}
+body > .content > .left-nav {
+    display: grid;
+    grid-template-rows: repeat(5,45px);
+    height: 100%;
+    flex: 1;
+    grid-gap: 10px;
+    transition-duration: 1s;
+    
+}
+body > .content > .mid {
+    height: 100%;
+    flex: 4;
+    padding: 50px;
+    position: relative;
+    transition-duration: 0.6s;
+    
+   }
+   .descrip {
+    width: 100%;
+    text-align: center;
+   }
+   .left-nav > div {
+    width: 100%;
+    grid-gap: 15px;
+   }
+.left-nav > div > iconify-icon {
+    font-size: 1.438rem;
+}
+.left-nav > div > p {
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+body > .nav > .right > button {
+    width: 80px;
+    height: 30px;
+    border: none;
+    
+}
+.mid > .carslist {
+    position: relative;
+    min-width: 27.25rem;
+    height: inherit;
+    margin: auto;
+    width: 80%;
+}
+.mid > .carslist > img {
+width: 100%;
+height: auto;
+border-radius: 10px;
+}
+.footer {
+    position: relative;
+    width: 100%;
+    height: 8vh;
+    margin-top: 10px;
+}
+@media (min-width:320px) and (max-width:720px) {
+    body {
+        
+        overflow:visible;
+    }
+    body > .content {
+        width: 100%;
+        height: 90vh;
+        flex-direction:column;
+        grid-gap: 10px;
+        
+    }
+    body > .content > .mid {
+        padding: 51px 5px;
+    }
+    body > .content > .left-nav {
+        display: grid;
+        grid-template-rows: repeat(1,0);
+        grid-template-columns: repeat(5,45px) !important;
+        height: 100%;
+        flex: .5 !important;
+        grid-gap: 20px;
+        transition-duration: 1s;
+        justify-content: center;
+        padding: 8px !important;
+        display: none;
+        translate: -620px;
+    }
+    .slide-mo {
+        display: grid !important;
+        translate: 0px !important;
+        
+        
+    }
+    .left-nav > div > p {
+        display: none !important;
+    }
+    .left-nav > div {
+        height: fit-content;
+    }
+    body > .nav > .right > button {
+       display: none;
+        
+    }
+    body > .footer > button {
+        width: 80px;
+        height: 30px;
+        border: none;
+        
+    }
+    .mid > .carslist {
+        
+        min-width: 20.25rem;
+        
+    }
+}
